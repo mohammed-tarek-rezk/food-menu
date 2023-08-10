@@ -63,7 +63,7 @@ header .container{
     align-items: center;
 }
 
-header .container .logo a {
+.container .logo a {
     display: block;
     top: 0px;
     font-size: 40px;
@@ -72,7 +72,7 @@ header .container .logo a {
     position: relative;
     padding: 0 10px;
 }
-header .container .logo a::before {
+.container .logo a::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -481,8 +481,11 @@ header .container ul li form input{
     flex-direction: row;
     gap: 20px;
     overflow-x: scroll;
-    height: 350px;
+    height: 330px;
     position: relative;
+}
+.offers div.container{
+    margin-bottom: 40px;
 }
 .offers > h2{
     top:0;
@@ -491,7 +494,7 @@ header .container ul li form input{
     justify-content: space-between;
     z-index: 100;
 }
-.offers> h2 span{
+.offers> h2 span,.services .container h2{
     text-transform: capitalize;
     font-family: 'Dancing Script', cursive;
     font-size: 30px;
@@ -564,16 +567,31 @@ header .container ul li form input{
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     overflow: hidden;
+    z-index: 100;
+    box-shadow: 1px 1px 5px 2px #26273581;
+
 }
 .offers .container .offers-flex >div a{
     display: block;
     position: relative;
+}
+.offers .container .offers-flex >div:hover a img {
+    transform: scale(1.2) rotate(10deg);
+    -webkit-transform: scale(1.2) rotate(10deg);
+    -moz-transform: scale(1.2) rotate(10deg);
+    -ms-transform: scale(1.2) rotate(10deg);
+    -o-transform: scale(1.2) rotate(10deg);
 }
 .offers .container .offers-flex >div a img{
     width: 300px;
     height: 300px;
     background-color: red;
     flex-shrink: 0;
+    transition: all 0.7s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.7s ease;
+    -ms-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
 }
 .offers .container .offers-flex >div a div{
     position: absolute;
@@ -631,3 +649,104 @@ header .container ul li form input{
     font-size: 20px;
 }
 /* end offers */
+.services{
+    background-color: #26273517;
+    padding-bottom:40px ;
+}
+.services .container h2{
+    margin: 20px 0;
+    text-transform: capitalize;
+
+}
+.services .container .services-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+}
+.services .container .services-grid div {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+}
+.services .container .services-grid span {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.46);
+    color: white;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.services .container .services-grid div img {
+    width: 100%;
+    height: 100%;
+}
+/* end services */
+/* start footer  */
+footer{
+    background-color: var(--second-color);
+    padding: 40px 0;
+}
+footer .container .logo a{
+    color: white;
+}
+
+
+footer .container .grid-footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 20px;
+}
+footer .container .grid-footer ul li a,footer .container .grid-footer h3{
+    display: block;
+    width: 50%;
+    font-size: 16px;
+    padding: 10px;
+    text-transform: capitalize;
+    color: white;
+    opacity: 0.7;
+}
+footer .container .grid-footer ul li a:hover{
+    opacity: 1;
+    border-left:2px solid white ;
+}
+footer .container .grid-footer div{
+    height: 200px;
+}
+footer .container .grid-footer div img{
+width: 100%;
+height: 100%;
+}
+@media (max-width:922px) {
+    footer .container .grid-footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .area{
+        grid-area: 2/1/3/3;
+    }
+}
+@media (max-width:768px) {
+    footer .container .grid-footer{
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap: 20px;
+    }
+    .area{
+        grid-area:3/1/4/1;
+    }
+}
+/* end footer  */
