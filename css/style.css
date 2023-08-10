@@ -476,4 +476,158 @@ header .container ul li form input{
     }
 
 }
+.offers .container .offers-flex{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: scroll;
+    height: 350px;
+    position: relative;
+}
+.offers > h2{
+    top:0;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+.offers> h2 span{
+    text-transform: capitalize;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+.offers> h2 a{
+    padding:  0 20px;
+    font-size: 16px;
+    line-height: 40px;
+    color: black;
+}
+.offers> h2 a i{
+    margin-left: 5px;
+}
+.offers> h2 a:hover{
+    color: var(--main-color);
+}
+.offers> h2 a:hover> i{
+    animation: more 0.5s ease 0s infinite alternate;
+    -webkit-animation: more 0.5s ease 0s infinite alternate;
+}
+@keyframes more {
+    from{
+        transform: translateX(0) rotate(90deg);
+        -webkit-transform: translateX(0) rotate(90deg);
+        -moz-transform: translateX(0) rotate(90deg);
+        -ms-transform: translateX(0) rotate(90deg);
+        -o-transform: translateX(0) rotate(90deg);
+}
+    to{
+        transform: translateX(20px) rotate(90deg);
+        -webkit-transform: translateX(20px) rotate(90deg);
+        -moz-transform: translateX(20px) rotate(90deg);
+        -ms-transform: translateX(20px) rotate(90deg);
+        -o-transform: translateX(20px) rotate(90deg);
+}
+}
+/* width */
+.offers .container .offers-flex::-webkit-scrollbar {
+    width: 10px;
+    position: relative;
+    margin-top: 205px;
+    height: 10px;
+}
+
+/* Track */
+.offers .container .offers-flex::-webkit-scrollbar-track {
+    position: relative;
+    margin-top: 5px;
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+
+/* Handle */
+.offers .container .offers-flex::-webkit-scrollbar-thumb {
+    background: var(--main-color); 
+    width: 300px;
+    border-radius: 10px;
+}
+
+
+.offers .container .offers-flex >div{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    flex-shrink: 0;
+    position: relative;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+}
+.offers .container .offers-flex >div a{
+    display: block;
+    position: relative;
+}
+.offers .container .offers-flex >div a img{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    flex-shrink: 0;
+}
+.offers .container .offers-flex >div a div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.458);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+.offers .container .offers-flex >div a div h3{
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+.offers .container .offers-flex >div a div p:first-of-type{
+    margin-top: 10px;
+    max-height: 120px;
+    overflow: hidden;
+    font-size: 14px;
+    text-overflow: ellipsis;
+}
+.offers .container .offers-flex >div a div p:last-of-type{
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 10px;
+    padding-top: 10px;
+    border-top: 1px solid white;
+}
+.offers .container .offers-flex >div a div p:last-of-type .price{
+    display: flex;
+    flex-direction: column;
+}
+.offers .container .offers-flex >div a div p:last-of-type .price del{
+    font-size: 12px;
+}
+.offers .container .offers-flex >div a div p:last-of-type .price span:first-of-type{
+    text-transform: capitalize;
+}
+.offers .container .offers-flex >div a div p:last-of-type .price span:last-of-type{
+    font-size: 25px;
+    color: var(--main-color);
+}
+.offers .container .offers-flex >div a div p:last-of-type .egp{
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 20px;
+}
 /* end offers */
