@@ -41,6 +41,9 @@ a{
     flex-wrap: nowrap;
     overflow-x: scroll;
 }
+.body{
+    position: relative;
+}
 /* end global styling  */
 /* start header  */
 header{
@@ -249,15 +252,27 @@ header .container ul li form input{
 /* start landing */
 .landing{
     margin-top: 5px;
-    background-color: #fac71f38;
-    position: absolute;
+    /* position: absolute; */
+    position: relative;
     top: -100px;
+
 }
 @media (max-width:992px) {
     .landing{
         position: relative;
         top: 0;
     }
+}
+@media (min-width:1600px) {
+    .landing{
+        width: 1600px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+}
 }
 .flex{
     display: flex;
@@ -273,14 +288,14 @@ header .container ul li form input{
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
 }
- .two:checked ~ div img{
+.two:checked ~ div img{
     transform: translateX(calc(-100% - 20px));
     -webkit-transform: translateX(calc(-100% - 20px));
     -moz-transform: translateX(calc(-100% - 20px));
     -ms-transform: translateX(calc(-100% - 20px));
     -o-transform: translateX(calc(-100% - 20px));
 }
- .three:checked ~ div img{
+.three:checked ~ div img{
     transform: translateX(calc(-200% - 40px));
     -webkit-transform: translateX(calc(-200% - 40px));
     -moz-transform: translateX(calc(-200% - 40px));
@@ -341,3 +356,119 @@ header .container ul li form input{
     display: block;
 }
 /* end landing */
+/* start offers */
+.offers{
+    position: relative;
+    top: -100px;
+}
+@media (max-width: 992px) {
+    .offers{
+        top: 0px;
+    }
+
+}
+.head{
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.head h2{
+    padding: 0px 20px 10px;
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+    width: fit-content;
+    position: relative;
+    overflow: hidden;
+    outline: 4px solid var(--main-color) ;
+    outline-offset: -4px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.head p{
+    margin-top: -5px;
+    text-transform: capitalize;
+    position: relative;
+    padding: 20px;
+
+}
+.head h2 span{
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background-color: #262735;
+}
+.head h2 span:first-of-type{
+    left: 0;
+    top: 100%;
+    animation: motion-bottom 4s ease 1.5s  infinite ;
+    -webkit-animation: motion-bottom 4s ease 1.5s  infinite ;
+}
+.head h2 span:last-of-type{
+    right: 0;
+    top: -100%;
+    animation: motion-top 3s ease 1.5s  infinite ;
+    -webkit-animation: motion-top 3s ease 1.5s  infinite ;
+}
+@keyframes motion-top {
+    0%{
+        
+    }
+    100%{
+        top: 100%;
+    }
+}
+@keyframes motion-bottom {
+    0%{
+        
+    }
+    100%{
+        top: -100%;
+    }
+}
+.head h2::after{
+    content: "";
+    width: 100%;
+    height: 4px;
+    left: -100%;
+    top: 0;
+    position: absolute;
+    background-image: linear-gradient(to right ,transparent 50% ,var(--second-color)50%);
+    border-image-repeat: stretch;
+    animation: motion-left 3s ease 0s infinite ;
+    -webkit-animation: motion-left 3s ease 0s infinite ;
+}
+.head h2::before{
+    content: "";
+    width: 100%;
+    height: 4px;
+    left: 100%;
+    bottom: 0;
+    position: absolute;
+    background-image: linear-gradient(to left ,transparent 50% ,var(--second-color)50%);
+    border-image-repeat: stretch;
+    animation: motion-right 4s ease 0.5s infinite ;
+    -webkit-animation: motion-right 4s ease 0.5s infinite ;
+}
+@keyframes motion-right {
+    0%{
+        
+    }
+    100%{
+        left: -100%;
+    }
+
+}
+@keyframes motion-left {
+    0%{
+        
+    }
+    100%{
+        left: 100%;
+    }
+
+}
+/* end offers */
