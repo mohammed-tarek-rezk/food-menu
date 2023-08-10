@@ -228,3 +228,92 @@ header .container ul li form input{
 
 }
 /* end header  */
+/* start landing */
+.landing{
+    margin-top: 5px;
+}
+.flex{
+    display: flex;
+    gap: 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+.flex img{
+    width: 100%;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+.container .two:checked ~ div img{
+    transform: translateX(calc(-100% - 20px));
+    -webkit-transform: translateX(calc(-100% - 20px));
+    -moz-transform: translateX(calc(-100% - 20px));
+    -ms-transform: translateX(calc(-100% - 20px));
+    -o-transform: translateX(calc(-100% - 20px));
+}
+.container .three:checked ~ div img{
+    transform: translateX(calc(-200% - 40px));
+    -webkit-transform: translateX(calc(-200% - 40px));
+    -moz-transform: translateX(calc(-200% - 40px));
+    -ms-transform: translateX(calc(-200% - 40px));
+    -o-transform: translateX(calc(-200% - 40px));
+}
+.landing .container{
+    position: relative;
+}
+.landing .container .slider-control{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    gap: 10px;
+    width: 100%;
+}
+.landing .container .slider-control label{
+    width: 30px;
+    height: 6px;
+    background-color: #89858588;
+    cursor: pointer;
+}
+.landing .container .one:checked ~ .slider-control .one,
+.landing .container .two:checked ~ .slider-control .two,
+.landing .container .three:checked ~ .slider-control .three
+{
+    background-color: var(--main-color);
+    border: 1px solid var(--second-color);
+}
+.landing .container .paragraph{
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 100%;
+    top: 0;
+    left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.256);
+
+}
+.landing .container .paragraph div{
+    color: white;
+    text-align: center;
+    display: none;
+}
+.landing .container .paragraph div h2{
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-family: 'Dancing Script', cursive; 
+}
+
+.landing .container .one:checked ~ .paragraph .one,
+.landing .container .two:checked ~ .paragraph .two,
+.landing .container .three:checked ~ .paragraph .three
+{
+    display: block;
+}
+/* end landing */
