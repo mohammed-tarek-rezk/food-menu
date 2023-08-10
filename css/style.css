@@ -63,7 +63,7 @@ header .container .logo a img{
     width: 125px;
 }
 header .container .bars{
-    width: 50px;
+    width: 40px;
     height: 30px;
     display: flex;
     flex-direction: column;
@@ -111,6 +111,7 @@ header .container ul li a{
     overflow: hidden;
     font-family: 'Dancing Script', cursive;
     font-weight: 900;
+    font-size: 18px;
 }
 header .container ul li a::after{
     content: "";
@@ -159,9 +160,6 @@ header .container ul li form input{
     font-family: 'Dancing Script', cursive;
 }
 
-/* header .container ul li form input::placeholder{
-    font-family: 'Dancing Script', cursive;
-} */
 @media (max-width: 992px) {
     header .container .bars{
         display: flex;
