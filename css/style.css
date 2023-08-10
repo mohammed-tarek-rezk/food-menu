@@ -249,6 +249,15 @@ header .container ul li form input{
 /* start landing */
 .landing{
     margin-top: 5px;
+    background-color: #fac71f38;
+    position: absolute;
+    top: -100px;
+}
+@media (max-width:992px) {
+    .landing{
+        position: relative;
+        top: 0;
+    }
 }
 .flex{
     display: flex;
@@ -264,24 +273,22 @@ header .container ul li form input{
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
 }
-.container .two:checked ~ div img{
+ .two:checked ~ div img{
     transform: translateX(calc(-100% - 20px));
     -webkit-transform: translateX(calc(-100% - 20px));
     -moz-transform: translateX(calc(-100% - 20px));
     -ms-transform: translateX(calc(-100% - 20px));
     -o-transform: translateX(calc(-100% - 20px));
 }
-.container .three:checked ~ div img{
+ .three:checked ~ div img{
     transform: translateX(calc(-200% - 40px));
     -webkit-transform: translateX(calc(-200% - 40px));
     -moz-transform: translateX(calc(-200% - 40px));
     -ms-transform: translateX(calc(-200% - 40px));
     -o-transform: translateX(calc(-200% - 40px));
 }
-.landing .container{
-    position: relative;
-}
-.landing .container .slider-control{
+
+.landing  .slider-control{
     display: flex;
     justify-content: center;
     position: absolute;
@@ -290,37 +297,36 @@ header .container ul li form input{
     gap: 10px;
     width: 100%;
 }
-.landing .container .slider-control label{
+.landing  .slider-control label{
     width: 30px;
     height: 6px;
     background-color: #89858588;
     cursor: pointer;
 }
-.landing .container .one:checked ~ .slider-control .one,
-.landing .container .two:checked ~ .slider-control .two,
-.landing .container .three:checked ~ .slider-control .three
+.landing  .one:checked ~ .slider-control .one,
+.landing  .two:checked ~ .slider-control .two,
+.landing  .three:checked ~ .slider-control .three
 {
     background-color: var(--main-color);
     border: 1px solid var(--second-color);
 }
-.landing .container .paragraph{
+.landing  .paragraph{
     position: absolute;
-    width: calc(100% - 30px);
+    width: 100%;
     height: 100%;
     top: 0;
-    left: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.458);
 
 }
-.landing .container .paragraph div{
+.landing  .paragraph div{
     color: white;
     text-align: center;
     display: none;
 }
-.landing .container .paragraph div h2{
+.landing  .paragraph div h2{
     font-size: 80px;
     text-transform: capitalize;
     margin-bottom: 10px;
@@ -328,9 +334,9 @@ header .container ul li form input{
     font-family: 'Dancing Script', cursive; 
 }
 
-.landing .container .one:checked ~ .paragraph .one,
-.landing .container .two:checked ~ .paragraph .two,
-.landing .container .three:checked ~ .paragraph .three
+.landing  .one:checked ~ .paragraph .one,
+.landing  .two:checked ~ .paragraph .two,
+.landing  .three:checked ~ .paragraph .three
 {
     display: block;
 }
