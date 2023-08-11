@@ -605,7 +605,7 @@ header .container ul li form input{
     -ms-transition: all 0.7s ease;
     -o-transition: all 0.7s ease;
 }
-.offers .container .offers-flex >div a div{
+.offers-flex .card a div{
     position: absolute;
     top: 0;
     left: 0;
@@ -616,20 +616,19 @@ header .container ul li form input{
     text-align: center;
     padding: 40px 0;
 }
-.offers .container .offers-flex >div a div h3{
+.card a div h3{
     font-family: 'Dancing Script', cursive;
     font-size: 35px;
     padding-bottom: 10px;
     border-bottom: 1px solid white;
 }
-.offers .container .offers-flex >div a div p:first-of-type{
+.card a div p:first-of-type{
     margin-top: 10px;
     max-height: 120px;
     overflow: hidden;
     font-size: 14px;
-    text-overflow: ellipsis;
 }
-.offers .container .offers-flex >div a div p:last-of-type{
+.card a div p:last-of-type{
     position: absolute;
     bottom: 40px;
     width: 100%;
@@ -640,21 +639,21 @@ header .container ul li form input{
     padding-top: 10px;
     border-top: 1px solid white;
 }
-.offers .container .offers-flex >div a div p:last-of-type .price{
+.card a div p:last-of-type .price{
     display: flex;
     flex-direction: column;
 }
-.offers .container .offers-flex >div a div p:last-of-type .price del{
+.card a div p:last-of-type .price del{
     font-size: 12px;
 }
-.offers .container .offers-flex >div a div p:last-of-type .price span:first-of-type{
+.card a div p:last-of-type .price span:first-of-type{
     text-transform: capitalize;
 }
-.offers .container .offers-flex >div a div p:last-of-type .price span:last-of-type{
+.card a div p:last-of-type .price span:last-of-type{
     font-size: 25px;
     color: var(--main-color);
 }
-.offers .container .offers-flex >div a div p:last-of-type .egp{
+.card a div p:last-of-type .egp{
     display: flex;
     align-items: center;
     text-transform: capitalize;
@@ -762,3 +761,249 @@ height: 100%;
     }
 }
 /* end footer  */
+/* starting menu page */
+.menu{
+    padding: 40px 0;
+}
+.menu .container .menu-flex{
+    display: flex;
+    gap: 20px;
+}
+.menu .container .menu-flex .items{
+    width: 100%;
+}
+.menu .container .menu-flex .items  .card {
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.062);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.menu .container .menu-flex .items  .card a {
+    display: flex;
+    background-color: #f9f9f9;
+
+    position: relative;
+    width: 100%;
+}
+.menu .container .menu-flex .items > div img{
+    width: 200px;
+    height: 200px;
+}
+.menu .container .menu-flex .items > div .items-body{
+    padding: 15px;
+    width: 100%;
+}
+.menu .container .menu-flex .items .card a div p:last-of-type{
+    width: fit-content;
+    bottom: 0;
+    
+}
+.menu .container .menu-flex .side{
+    width: 300px;
+    /* height: 140vh; */
+    position: sticky;
+    top: 100px;
+    padding: 20px 0;
+}
+.menu .container .menu-flex .side  h3{
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(107, 107, 107, 0.578);
+    margin-bottom: 10px;
+}
+.menu .container .menu-flex .side .categories p {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+    color: #848383;
+    font-weight: 200;
+    text-transform: capitalize;
+    position: relative;
+}
+.menu .container .menu-flex .side .categories p span {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.menu .container .menu-flex .side .posts > div {
+    display: flex;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(107, 107, 107, 0.578);
+    margin-bottom: 10px;
+}
+.menu .container .menu-flex .side .posts div img {
+    width: 70px;
+    height: 60px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.menu .container .menu-flex .side .posts .post-body p:first-of-type {
+    max-height: 40px;
+    overflow: hidden;
+    font-size: 12px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.menu .container .menu-flex .side .posts .post-body p:last-of-type {
+    font-size: 12px;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+.menu .container .menu-flex .side .posts .post-body p:last-of-type i{
+    color: red;
+}
+.menu .container .menu-flex .side .off img{
+    width: 100%;
+    margin-top: 10px;
+    
+}
+.menu .container .menu-flex .side .instgram .inst-grid{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 60px 60px 60px;
+
+}
+.menu .container .menu-flex .side .instgram .inst-grid img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.tages .tages-body a{
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px / 50%;
+    -webkit-border-radius: 10px / 50%;
+    -moz-border-radius: 10px / 50%;
+    -ms-border-radius: 10px / 50%;
+    -o-border-radius: 10px / 50%;
+    background-color:#f9f9f9 ;
+    color: black;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.053);
+    margin: 5px 0;
+    font-size: 12px;
+}
+.menu .container .menu-flex .items .card a div h3 {
+    font-size: 30px;
+    border: 0;
+}
+.menu .container .menu-flex .items .card a div p:first-of-type {
+    font-size: 14px;
+}
+.menu .container .menu-flex .items .card a div p:last-of-type{
+    border: 0;
+    bottom: 10px;
+}
+.menu .container .menu-flex .items .card a div p:last-of-type .price span {
+    font-size: 14px;
+}
+.menu .container .menu-flex .items .card a div p:last-of-type .egp {
+    font-size: 14px;
+}
+@media (max-width:992px) {
+    .menu .container .hid-butt{
+        cursor: pointer;
+        position: fixed;
+        right: 5px;
+        top: 62px;
+        z-index: 10;
+        padding: 10px 20px;
+        background-color: var(--second-color);
+        color: white;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        transition: all 0.4s ease ;
+        -webkit-transition: all 0.4s ease ;
+        -moz-transition: all 0.4s ease ;
+        -ms-transition: all 0.4s ease ;
+        -o-transition: all 0.4s ease ;
+        font-size: 12px;
+}
+.menu .container .hid-butt:hover{
+    color: var(--main-color);
+}
+    .menu .container .menu-flex .items > div img{
+        width: 120px;
+        height: 150px;
+    }
+    .menu .container .menu-flex .items > div .items-body h3{
+        font-size: 25px;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+    .menu .container .menu-flex .items .card a div p:first-of-type{
+        font-size: 12px;
+        margin-top: 5px;
+        max-height: 50px;
+        margin-top: 0;
+        border: 0;
+    }
+    .menu .container .menu-flex .items .card a div p:last-of-type{
+        bottom: 10px;
+        border: 0;
+    }
+    .menu .container .menu-flex .items .card a div p:last-of-type .price span {
+        font-size: 12px;
+    }
+    .menu .container .menu-flex .items .card a div p:last-of-type .price del {
+        font-size: 8px;
+    }  
+    .card a div p:last-of-type .egp{
+        font-size: 12px;
+    }
+    .menu .container .menu-flex{
+        display: block;
+    }
+    .menu .container .menu-flex .back-menu{
+        position: fixed;
+        top: 60px;
+        left: -100vw;
+        width: 100vw;
+        height: 160vh;
+        z-index: 10;
+    }
+    .menu .container .menu-flex .back-menu .side{
+        background-color: white;
+        padding: 10px;
+        position: absolute;
+        top: 0px;
+        left: -100%;
+        transition: all 0.6s ease;
+        -webkit-transition: all 0.6s ease;
+        -moz-transition: all 0.6s ease;
+        -ms-transition: all 0.6s ease;
+        -o-transition: all 0.6s ease;
+}
+    .menu .container .menu-flex .back-menu .back-side{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #00000015;
+        left: 0;
+    }
+    #side-menu:checked ~ .container .menu-flex .back-menu{
+        display: block;
+        left: 0;
+    }
+    #side-menu:checked ~ .container .menu-flex .back-menu .side{
+        left: 0;
+    }
+}
+/* ending menu page  */
